@@ -20,7 +20,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} font-inter tracking-tight`}>
       <body className="min-h-screen">
         <>
-          {" "}
           <NavbarContainer>
             {/* Some of the PrimeReact's Data Table's CSS doesn't get rendered properly if you use a NextJS Link lol */}
             <h1 className="text-2xl font-bold tracking-tighter ">

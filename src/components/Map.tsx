@@ -63,13 +63,13 @@ const Map = () => {
         ))}
       </MapContainer>
 
-      {/* <p className="font-bold">Decade</p>
+      <p className="font-bold">Decade</p>
       <Dropdown
         options={["2030", "2040", "2050", "2060", "2070", "2080"]}
         setter={setDecade}
         placeholder={decade}
         key="1"
-      ></Dropdown> */}
+      ></Dropdown>
     </>
   )
 }
