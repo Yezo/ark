@@ -24,6 +24,8 @@ import { Line } from "react-chartjs-2"
 import { useParse } from "@/hooks/useParse"
 import { useFlatten } from "@/hooks/useFlatten"
 import Dropdown from "@/components/Dropdown"
+import DropdownContainer from "@/components/LineChart/DropdownContainer"
+import DropdownTitle from "@/components/LineChart/DropdownTitle"
 
 const LineChart = () => {
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
@@ -142,24 +144,37 @@ const LineChart = () => {
 
   return (
     <>
-      <Dropdown
-        options={getListOfAllAssetNames()}
-        setter={setName}
-        placeholder={name}
-        key="1"
-      ></Dropdown>
-      <Dropdown
-        options={getListOfAllBusinessCategories()}
-        setter={setCategory}
-        placeholder={category}
-        key="2"
-      ></Dropdown>
-      <Dropdown
-        options={["All", ...getListOfAllLocations()]}
-        setter={setLocation}
-        placeholder={location}
-        key="3"
-      ></Dropdown>
+      <div className="flex gap-4 justify-around items-center p-2">
+        <DropdownContainer>
+          <DropdownTitle>Asset Names</DropdownTitle>
+          <Dropdown
+            options={getListOfAllAssetNames()}
+            setter={setName}
+            placeholder={name}
+            key="1"
+          ></Dropdown>
+        </DropdownContainer>
+
+        <DropdownContainer>
+          <DropdownTitle>Business Category</DropdownTitle>
+          <Dropdown
+            options={getListOfAllBusinessCategories()}
+            setter={setCategory}
+            placeholder={category}
+            key="2"
+          ></Dropdown>
+        </DropdownContainer>
+
+        <DropdownContainer>
+          <DropdownTitle>Location</DropdownTitle>
+          <Dropdown
+            options={["All", ...getListOfAllLocations()]}
+            setter={setLocation}
+            placeholder={location}
+            key="3"
+          ></Dropdown>
+        </DropdownContainer>
+      </div>
 
       <div className="max-w-[50rem]">
         <Line data={datas} options={options} />
