@@ -1,14 +1,13 @@
 import dynamic from "next/dynamic"
 
+const Map = dynamic(() => import("../../components/Map"), {
+  ssr: false,
+})
 export default function MapPage() {
-  const OpenStreetMap = dynamic(() => import("../../components/Map"), {
-    ssr: false,
-  })
-
   return (
     <main>
       <div>
-        <OpenStreetMap />
+        <Map />
       </div>
     </main>
   )

@@ -1,5 +1,6 @@
-import LineChart from "@/components/LineChart/LineChart"
-import React from "react"
+import dynamic from "next/dynamic"
+
+const LineChart = dynamic(() => import("@/components/LineChart/LineChart"))
 
 export default function ChartPage() {
   return (

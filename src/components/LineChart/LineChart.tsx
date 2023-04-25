@@ -1,16 +1,14 @@
 "use client"
 
 // Imports - Libraries
-import { useEffect, useState } from "react"
-import Papa from "papaparse"
+import { useState } from "react"
 
 // Imports - Leaflet
 import "../../app/globals.css"
 
 //Imports - Typescript
-import { ISampleData, ISampleDataFixed } from "../../types/ISampleData"
+import { ISampleDataFixed } from "../../types/ISampleData"
 import { Dropdown } from "@/components/Dropdown"
-import { flat } from "@/helpers/helpers"
 import "primereact/resources/themes/lara-light-indigo/theme.css"
 import "primereact/resources/primereact.min.css"
 import {

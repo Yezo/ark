@@ -1,7 +1,8 @@
-import PrimeTable from "@/components/DataTable/PrimeTable"
-import React from "react"
+import dynamic from "next/dynamic"
 
-export default function page() {
+const PrimeTable = dynamic(() => import("@/components/DataTable/PrimeTable"))
+
+export default function TablePage() {
   return (
     <main>
       <PrimeTable hideCategories={false} rowAmount={25} />

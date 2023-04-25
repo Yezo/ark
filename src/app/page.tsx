@@ -8,7 +8,6 @@ export default function Home() {
   const OpenStreetMap = dynamic(() => import("../components/Map"), {
     ssr: false,
   })
-
   return (
     <main>
       <header className="py-20 px-4 md:px-80 bg-[#EDF1F5] min-h-[calc(100vh-64px)]">
