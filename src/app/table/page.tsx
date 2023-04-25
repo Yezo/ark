@@ -4,8 +4,8 @@ const PrimeTable = dynamic(() => import("@/components/DataTable/PrimeTable"))
 
 export default function TablePage() {
   return (
-    <main>
-      <PrimeTable hideCategories={false} rowAmount={25} />
+    <main className="min-h-[calc(100vh-180px)]">
+      <PrimeTable hideCategories={false} rowAmount={13} />
     </main>
   )
 }

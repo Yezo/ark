@@ -136,8 +136,8 @@ const LineChart = () => {
       {
         label: "Risk Ratings",
         data: values.map((item) => item),
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "#feac1d",
+        backgroundColor: "#feac1d",
       },
     ],
   }
@@ -176,7 +176,7 @@ const LineChart = () => {
         </DropdownContainer>
       </div>
 
-      <div className="max-w-[50rem]">
+      <div className="max-w-[50rem] min-w-[700px]">
         <Line data={datas} options={options} />
       </div>
     </>
