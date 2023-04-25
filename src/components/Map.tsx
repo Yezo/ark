@@ -9,17 +9,10 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import { greenIcon, yellowIcon, redIcon, orangeIcon, lightGreenIcon } from "./Markers/Markers"
 import "leaflet/dist/leaflet.css"
 import "../app/globals.css"
-import Dropdown from "@/components/LineChart/Dropdown"
 
-<<<<<<< HEAD
 //Imports - Components
-=======
-//Imports - Dynamic
-import dynamic from "next/dynamic"
-const Dropdown = dynamic(() => import("@/components/LineChart/Dropdown"))
->>>>>>> 858b8f64f112c6627a2a1d49506adeda9d881b47
 
-export default function Map() {
+const Map = () => {
   // States
   const { data } = useParse(
     "https://docs.google.com/spreadsheets/d/11R-Ak5Edggygo4nXv9QjU32ATR75-UDKeyBsZlOx-fI/pub?output=csv"
@@ -70,12 +63,8 @@ export default function Map() {
       </MapContainer>
 
       <p className="font-bold">Decade</p>
-      <Dropdown
-        options={["2030", "2040", "2050", "2060", "2070", "2080"]}
-        setter={setDecade}
-        placeholder={decade}
-        key="1"
-      ></Dropdown>
     </>
   )
 }
+
+export default Map
