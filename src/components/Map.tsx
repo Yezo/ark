@@ -9,6 +9,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import { greenIcon, yellowIcon, redIcon, orangeIcon, lightGreenIcon } from "./Markers/Markers"
 import "leaflet/dist/leaflet.css"
 import "../app/globals.css"
+import Dropdown from "@/components/Dropdown"
+import DropdownContainer from "@/components/LineChart/DropdownContainer"
+import DropdownTitle from "@/components/LineChart/DropdownTitle"
 
 //Imports - Components
 
@@ -32,8 +35,21 @@ const Map = () => {
   }
   return (
     <>
+      <div className="flex items-center justify-between w-full max-w-[700px] bg-white text-dark p-4">
+        <h2 className="font-bold text-2xl">Risk Factor - Map Markers</h2>
+        <DropdownContainer>
+          <DropdownTitle>Filter by decade</DropdownTitle>
+          <Dropdown
+            options={["2030", "2040", "2050", "2060", "2070"]}
+            setter={setDecade}
+            placeholder={decade}
+            key="1"
+          ></Dropdown>
+        </DropdownContainer>
+      </div>
+
       <MapContainer
-        className="map"
+        className="map z-0"
         center={[45.44868, -73.81668]}
         zoom={2}
         scrollWheelZoom={true}
@@ -61,8 +77,6 @@ const Map = () => {
           </Marker>
         ))}
       </MapContainer>
-
-      <p className="font-bold">Decade</p>
     </>
   )
 }

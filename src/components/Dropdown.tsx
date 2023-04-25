@@ -63,7 +63,7 @@ export default function Dropdown({ options, setter, placeholder }: Props) {
         </span>
       </button>
       {isExpanded && (
-        <div className="absolute mt-[4.5px] flex min-w-[12rem] max-w-fit cursor-pointer flex-col gap-5 overflow-y-auto rounded bg-secondary ring-1 ring-black/[.15] text-sm bg-dark text-white font-semibold max-h-[15.5rem]">
+        <div className="absolute mt-[4.5px] flex min-w-[12rem] max-w-fit cursor-pointer flex-col gap-5 overflow-y-auto rounded bg-secondary ring-1 ring-black/[.15] text-sm bg-dark text-white font-semibold max-h-[15.5rem] z-10">
           <div className="">
             {options.map((option) => (
               <div

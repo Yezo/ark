@@ -144,7 +144,7 @@ const LineChart = () => {
 
   return (
     <>
-      <div className="flex gap-4 justify-around items-center p-2">
+      <div className="flex gap-4 justify-around items-center p-2 ">
         <DropdownContainer>
           <DropdownTitle>Asset Names</DropdownTitle>
           <Dropdown

@@ -5,10 +5,8 @@ const Map = dynamic(() => import("../../components/Map"), {
 })
 export default function MapPage() {
   return (
-    <main>
-      <div>
-        <Map />
-      </div>
+    <main className="min-h-[calc(100vh-180px)] flex flex-col gap-4 items-center justify-center">
+      <Map />
     </main>
   )
 }
