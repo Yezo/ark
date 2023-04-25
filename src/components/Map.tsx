@@ -10,10 +10,11 @@ import { greenIcon, yellowIcon, redIcon, orangeIcon, lightGreenIcon } from "./Ma
 import "leaflet/dist/leaflet.css"
 import "../app/globals.css"
 
-//Imports - Components
-import { Dropdown } from "./Dropdown"
+//Imports - Dynamic
+import dynamic from "next/dynamic"
+const Dropdown = dynamic(() => import("@/components/LineChart/Dropdown"))
 
-const Map = () => {
+export default function Map() {
   // States
   const { data } = useParse(
     "https://docs.google.com/spreadsheets/d/11R-Ak5Edggygo4nXv9QjU32ATR75-UDKeyBsZlOx-fI/pub?output=csv"
@@ -73,5 +74,3 @@ const Map = () => {
     </>
   )
 }
-
-export default Map
