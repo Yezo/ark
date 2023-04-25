@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <header className="py-20 px-4 md:px-80 bg-[#EDF1F5] min-h-[calc(100vh-64px)]">
         <h2 className="text-6xl font-bold text-dark">
-          Climate risk could end up as your financial risk
+          Climate risk could end up as your financial risks
         </h2>
         <p className="max-w-[55ch] text-text">
           Earth is facing climate change problems at an unprecedented rate. With riskthinking, users
