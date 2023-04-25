@@ -8,7 +8,7 @@ import "../../app/globals.css"
 
 //Imports - Typescript
 import { ISampleDataFixed } from "../../types/ISampleData"
-import { Dropdown } from "@/components/Dropdown"
+
 import "primereact/resources/themes/lara-light-indigo/theme.css"
 import "primereact/resources/primereact.min.css"
 import {
@@ -24,6 +24,7 @@ import {
 import { Line } from "react-chartjs-2"
 import { useParse } from "@/hooks/useParse"
 import { useFlatten } from "@/hooks/useFlatten"
+import Dropdown from "@/components/LineChart/Dropdown"
 
 const LineChart = () => {
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)

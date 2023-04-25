@@ -9,9 +9,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import { greenIcon, yellowIcon, redIcon, orangeIcon, lightGreenIcon } from "./Markers/Markers"
 import "leaflet/dist/leaflet.css"
 import "../app/globals.css"
+import Dropdown from "@/components/LineChart/Dropdown"
 
 //Imports - Components
-import { Dropdown } from "./Dropdown"
 
 const Map = () => {
   // States
