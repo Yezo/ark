@@ -23,7 +23,7 @@ import {
 import { Line } from "react-chartjs-2"
 import { useParse } from "@/hooks/useParse"
 import { useFlatten } from "@/hooks/useFlatten"
-import Dropdown from "@/components/Dropdown"
+import Dropdown from "@/components/Generics/Dropdown"
 import DropdownContainer from "@/components/LineChart/DropdownContainer"
 import DropdownTitle from "@/components/LineChart/DropdownTitle"
 

@@ -26,7 +26,7 @@ export default function Dropdown({ options, setter, placeholder }: Props) {
   return (
     <div ref={dropdownMenu}>
       <button
-        className={`scrollbar flex min-w-[12rem] items-center  justify-between rounded bg-secondary  px-3 py-2 text-[0.845rem] font-semibold shadow-md ring-1 ring-black/[.15] transition-colors hover:bg-accent hover:text-dark bg-dark text-white`}
+        className={`scrollbar flex min-w-[12rem] items-center  justify-between rounded bg-secondary  px-3 py-2 text-[0.845rem] font-semibold shadow-md ring-2 ring-black/[.15] transition-colors hover:bg-accent hover:text-dark-text hover:ring-black bg-dark-bg text-light-text`}
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <span>{placeholder}</span>
@@ -63,7 +63,7 @@ export default function Dropdown({ options, setter, placeholder }: Props) {
         </span>
       </button>
       {isExpanded && (
-        <div className="absolute mt-[4.5px] flex min-w-[12rem] max-w-fit cursor-pointer flex-col gap-5 overflow-y-auto rounded bg-secondary ring-1 ring-black/[.15] text-sm bg-dark text-white font-semibold max-h-[15.5rem] z-10">
+        <div className="absolute mt-[4.5px] flex min-w-[12rem] max-w-fit cursor-pointer flex-col gap-5 overflow-y-auto rounded bg-secondary ring-1 ring-black/[.15] text-sm bg-dark-bg text-light-text font-semibold max-h-[15.5rem] z-10">
           <div className="">
             {options.map((option) => (
               <div
@@ -71,7 +71,7 @@ export default function Dropdown({ options, setter, placeholder }: Props) {
                   setIsExpanded(false)
                   setter(option)
                 }}
-                className="px-3 py-2 transition-colors hover:bg-accent hover:text-dark "
+                className="px-3 py-2 transition-colors hover:bg-accent hover:text-dark-text "
                 key={option}
               >
                 {option}

@@ -15,9 +15,11 @@ module.exports = {
         inter: ["var(--font-inter)"],
       },
       colors: {
-        dark: "#232323",
-        text: "#333333",
         accent: "#feac1d",
+        "light-bg": "#EDF1F5",
+        "light-text": "#F6F6F6",
+        "dark-bg": "#212121",
+        "dark-text": "#333333",
       },
     },
   },

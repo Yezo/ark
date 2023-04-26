@@ -9,7 +9,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 import { greenIcon, yellowIcon, redIcon, orangeIcon, lightGreenIcon } from "./Markers/Markers"
 import "leaflet/dist/leaflet.css"
 import "../app/globals.css"
-import Dropdown from "@/components/Dropdown"
+import Dropdown from "@/components/Generics/Dropdown"
 import DropdownContainer from "@/components/LineChart/DropdownContainer"
 import DropdownTitle from "@/components/LineChart/DropdownTitle"
 
@@ -35,7 +35,7 @@ const Map = () => {
   }
   return (
     <>
-      <div className="flex items-center justify-between w-full max-w-[700px] bg-white text-dark p-4">
+      <div className="flex items-center justify-between w-full max-w-[700px] bg-light-bg text-dark-text p-4">
         <h2 className="font-bold text-2xl">Risk Factor - Map Markers</h2>
         <DropdownContainer>
           <DropdownTitle>Filter by decade</DropdownTitle>
@@ -69,7 +69,7 @@ const Map = () => {
             <Popup>
               <p className="flex flex-col gap-2 justify-center items-center">
                 <span className="font-bold text-lg">{item["Asset Name"]}</span>
-                <span className="font-semibold text-xs bg-black text-white py-2 px-2 rounded-md">
+                <span className="font-semibold text-xs bg-dark-bg text-light-text py-2 px-2 rounded-md">
                   {item["Business Category"]}
                 </span>
               </p>

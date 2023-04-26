@@ -16,7 +16,7 @@ export default function Navbar() {
           {/* Some of the PrimeReact's Data Table's CSS doesn't get rendered properly if you use a NextJS Link lol */}
           <a
             href="/table"
-            className="relative block select-none tracking-tight outline-none before:absolute before:-bottom-1.5 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-[#feac1d] before:transition hover:before:scale-100"
+            className="relative block select-none tracking-tight outline-none before:absolute before:-bottom-1.5 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-accent before:transition hover:before:scale-100"
           >
             Table
           </a>
