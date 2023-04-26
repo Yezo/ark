@@ -144,40 +144,41 @@ const LineChart = () => {
 
   return (
     <>
-      <div className="flex gap-4 justify-around items-center p-2 ">
-        <DropdownContainer>
-          <DropdownTitle>Asset Names</DropdownTitle>
-          <Dropdown
-            options={getListOfAllAssetNames()}
-            setter={setName}
-            placeholder={name}
-            key="1"
-          ></Dropdown>
-        </DropdownContainer>
+      <div>
+        <div className="flex gap-4 justify-around items-center p-2 flex-wrap">
+          <DropdownContainer>
+            <DropdownTitle>Asset Names</DropdownTitle>
+            <Dropdown
+              options={getListOfAllAssetNames()}
+              setter={setName}
+              placeholder={name}
+              key="1"
+            ></Dropdown>
+          </DropdownContainer>
 
-        <DropdownContainer>
-          <DropdownTitle>Business Category</DropdownTitle>
-          <Dropdown
-            options={getListOfAllBusinessCategories()}
-            setter={setCategory}
-            placeholder={category}
-            key="2"
-          ></Dropdown>
-        </DropdownContainer>
+          <DropdownContainer>
+            <DropdownTitle>Business Category</DropdownTitle>
+            <Dropdown
+              options={getListOfAllBusinessCategories()}
+              setter={setCategory}
+              placeholder={category}
+              key="2"
+            ></Dropdown>
+          </DropdownContainer>
 
-        <DropdownContainer>
-          <DropdownTitle>Location</DropdownTitle>
-          <Dropdown
-            options={["All", ...getListOfAllLocations()]}
-            setter={setLocation}
-            placeholder={location}
-            key="3"
-          ></Dropdown>
-        </DropdownContainer>
-      </div>
-
-      <div className="max-w-[50rem] min-w-[700px]">
-        <Line data={datas} options={options} />
+          <DropdownContainer>
+            <DropdownTitle>Location</DropdownTitle>
+            <Dropdown
+              options={["All", ...getListOfAllLocations()]}
+              setter={setLocation}
+              placeholder={location}
+              key="3"
+            ></Dropdown>
+          </DropdownContainer>
+        </div>
+        <div className="min-w-[350px] max-w-full">
+          <Line data={datas} options={options} />
+        </div>
       </div>
     </>
   )

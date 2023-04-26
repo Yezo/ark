@@ -3,6 +3,7 @@ import "./globals.css"
 
 //Imports - Dynamic
 import dynamic from "next/dynamic"
+
 const Map = dynamic(() => import("../components/Map"), {
   ssr: false,
 })
@@ -22,7 +23,9 @@ const ProjectSectionSubtitle = dynamic(
   () => import("@/components/ProjectSection/ProjectSectionSubtitle")
 )
 const ProjectSectionCTA = dynamic(() => import("@/components/ProjectSection/ProjectSectionCTA"))
-
+const ProjectSectionTextContainer = dynamic(
+  () => import("@/components/ProjectSection/ProjectSectionTextContainer")
+)
 export default function Home() {
   return (
     <main>
@@ -39,8 +42,8 @@ export default function Home() {
         <Link href="/"></Link>
       </header>
 
-      <ProjectSectionContainer darkMode={true}>
-        <div className="flex flex-col justify-around ">
+      <ProjectSectionContainer reverse={false} darkMode={true}>
+        <ProjectSectionTextContainer>
           <ProjectSectionTitle>
             Worldwide <span className="text-accent">risk</span> ratings
           </ProjectSectionTitle>
@@ -52,7 +55,7 @@ export default function Home() {
           </ProjectSectionSubtitle>
 
           <ProjectSectionCTA url="/map"></ProjectSectionCTA>
-        </div>
+        </ProjectSectionTextContainer>
 
         <ProjectSideContainer>
           <Map />
@@ -60,7 +63,7 @@ export default function Home() {
       </ProjectSectionContainer>
 
       <ProjectSectionContainer reverse={true} darkMode={false}>
-        <div className="flex flex-col justify-around ">
+        <ProjectSectionTextContainer>
           <ProjectSectionTitle>Easily digestible data in every form imaginable</ProjectSectionTitle>
           <ProjectSectionSubtitle>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium molestias illum et
@@ -70,15 +73,15 @@ export default function Home() {
           </ProjectSectionSubtitle>
 
           <ProjectSectionCTA url="/chart"></ProjectSectionCTA>
-        </div>
+        </ProjectSectionTextContainer>
 
         <ProjectSideContainer>
           <LineChart />
         </ProjectSideContainer>
       </ProjectSectionContainer>
 
-      <ProjectSectionContainer darkMode={true}>
-        <div className="flex flex-col justify-around ">
+      <ProjectSectionContainer reverse={false} darkMode={true}>
+        <ProjectSectionTextContainer>
           <ProjectSectionTitle>
             Tabulated data for multiple <span className="text-accent">asset types</span> and
             <span className="text-accent"> risk factors</span>
@@ -92,7 +95,7 @@ export default function Home() {
           </ProjectSectionSubtitle>
 
           <ProjectSectionCTA url="/table"></ProjectSectionCTA>
-        </div>
+        </ProjectSectionTextContainer>
 
         <ProjectSideContainer>
           <PrimeTable hideCategories={true} rowAmount={10} />
