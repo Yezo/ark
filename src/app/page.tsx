@@ -24,7 +24,6 @@ const ProjectSectionTitle = dynamic(() => import("@/components/ProjectSection/Pr
 const ProjectSectionSubtitle = dynamic(
   () => import("@/components/ProjectSection/ProjectSectionSubtitle")
 )
-const ProjectSectionCTA = dynamic(() => import("@/components/ProjectSection/ProjectSectionCTA"))
 const ProjectSectionTextContainer = dynamic(
   () => import("@/components/ProjectSection/ProjectSectionTextContainer")
 )
