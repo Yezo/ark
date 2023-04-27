@@ -85,10 +85,14 @@ const LineChart = () => {
     averageRiskRatingIn2050,
     averageRiskRatingIn2060,
     averageRiskRatingIn2070,
-  ].filter((value) => value)
+  ]
 
-  const labels = avgDataPoints.map((item) => item && item.year)
-  const values = avgDataPoints.map((item) => item && item.riskRating)
+  const labels =
+    avgDataPoints.length >= 1 &&
+    avgDataPoints.filter((value) => value).map((item) => item && item.year)
+  const values =
+    avgDataPoints.length >= 1 &&
+    avgDataPoints.filter((value) => value).map((item) => item && item.riskRating)
 
   //Populate dropdown menus
   const getListOfAllAssetNames = () => {
@@ -144,7 +148,7 @@ const LineChart = () => {
 
   return (
     <>
-      <div>
+      <div className="max-w-[700px] xl:min-w-[700px]">
         <div className="flex gap-4 justify-around items-center p-2 flex-wrap">
           <DropdownContainer>
             <DropdownTitle>Asset Names</DropdownTitle>
