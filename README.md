@@ -1,4 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- https://github.com/tpacun/Best-README-Template -->
+<div id="top"></div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#riskthinkingai">RiskThinkingAI</a></li>
+    <li><a href="#built-with">Built With</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#links">Links</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## RiskThinkingAI
+
+https://riskthinking.vercel.app/
+
+- Utilizes PapaParse to parse CSV data into a JSON object
+- Features reusable custom hooks for parsing data objects
+- Map with markers for each Business
+- Charts with dynamic data for Risk Ratings
+- Data table with sorting and filtering functionality
+- Optimized for dynamic importing of components
+- Optimized data table with pagination
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Built With
+
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+- Chart.js
+- PrimeReact (DataTable)
+- PapaParse
+- ReactLeafletMaps
+- React Testing Library
+- Jest
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -14,23 +58,34 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+<!-- CONTACT -->
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Links
 
-## Learn More
+Designed and developed by Kevin Vo for RiskThinking Work Sample
 
-To learn more about Next.js, take a look at the following resources:
+- Project Demo Link: https://riskthinking.vercel.app/
+- Project Code Repository: [https://github.com/Yezo/riskthinking](https://github.com/Yezo/riskthinking)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Email: kvo.codes@gmail.com
+- My Portfolio: https://kvo.vercel.app/
+- My GitHub: https://github.com/Yezo
+- My LinkedIn: https://www.linkedin.com/in/kvocodes/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Deploy on Vercel
+<!-- ACKNOWLEDGEMENTS -->
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Acknowledgements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- https://primereact.org/datatable/
+- https://react-chartjs-2.js.org/
+- https://react-leaflet.js.org/
+- https://beta.nextjs.org/docs/optimizing/lazy-loading
+- https://www.youtube.com/watch?v=Ody2U-fJ580
+- http://www.benjaminkeen.com/google-maps-coloured-markers/
+- https://stackoverflow.com/questions/64451221/update-all-object-values-to-be-rounded-by-two-decimals
+
+<p align="right">(<a href="#top">back to top</a>)</p>
