@@ -61,7 +61,7 @@ const LineChart = () => {
     const obj = data.filter((item) => item.Year === year)
     //Check to see if there is a valid data-point by the given year
     //Otherwise undefineds and NaNs will pop up
-    if (obj.length >= 1) {
+    if (obj && obj.length >= 1) {
       const listOfRiskRatings = obj.map((value: any) => value["Risk Rating"])
       const averageRiskRatingPerYear =
         listOfRiskRatings.reduce((a: string, b: string) => Number(a) + Number(b), 0) /
@@ -85,14 +85,26 @@ const LineChart = () => {
     averageRiskRatingIn2050,
     averageRiskRatingIn2060,
     averageRiskRatingIn2070,
-  ]
+  ].filter((value) => value)
 
-  const labels =
-    avgDataPoints.length >= 1 &&
-    avgDataPoints.filter((value) => value).map((item) => item && item.year)
-  const values =
-    avgDataPoints.length >= 1 &&
-    avgDataPoints.filter((value) => value).map((item) => item && item.riskRating)
+  const getLabels = () => {
+    if (avgDataPoints.length >= 1) {
+      return avgDataPoints.filter((value) => value).map((item) => item && item.year)
+    } else {
+      return
+    }
+  }
+
+  const getValues = () => {
+    if (avgDataPoints.length >= 1) {
+      return avgDataPoints.filter((value) => value).map((item) => item && item.riskRating)
+    } else {
+      return
+    }
+  }
+
+  const values = getValues()
+  const labels = getLabels()
 
   //Populate dropdown menus
   const getListOfAllAssetNames = () => {
@@ -139,7 +151,7 @@ const LineChart = () => {
     datasets: [
       {
         label: "Risk Ratings",
-        data: values.map((item) => item),
+        data: values && values.map((item) => item),
         borderColor: "#feac1d",
         backgroundColor: "#feac1d",
       },
