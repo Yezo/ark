@@ -5,7 +5,7 @@ import "./globals.css"
 import dynamic from "next/dynamic"
 import Image from "next/image"
 import hero from "../../public/hero.webp"
-import CTAButton from "@/components/Generics/CTAButton"
+
 const Map = dynamic(() => import("../components/Map"), {
   ssr: false,
 })
@@ -16,7 +16,6 @@ const LineChart = dynamic(() => import("@/components/LineChart/LineChart"), {
 const ProjectSectionContainer = dynamic(
   () => import("@/components/ProjectSection/ProjectSectionContainer")
 )
-
 const ProjectSideContainer = dynamic(
   () => import("@/components/ProjectSection/ProjectSideContainer")
 )
@@ -27,6 +26,7 @@ const ProjectSectionSubtitle = dynamic(
 const ProjectSectionTextContainer = dynamic(
   () => import("@/components/ProjectSection/ProjectSectionTextContainer")
 )
+const CTAButton = dynamic(() => import("@/components/Generics/CTAButton"))
 export default function Home() {
   return (
     <main>

@@ -1,5 +1,7 @@
-import FooterContainer from "@/components/Footer/FooterContainer"
 import Link from "next/link"
+import dynamic from "next/dynamic"
+
+const FooterContainer = dynamic(() => import("@/components/Footer/FooterContainer"))
 
 export default function Footer() {
   return (

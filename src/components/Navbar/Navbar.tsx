@@ -1,7 +1,9 @@
-import NavbarContainer from "@/components/Navbar/NavbarContainer"
-import NavbarLink from "@/components/Navbar/NavbarLink"
-import NavbarLinksContainer from "@/components/Navbar/NavbarLinksContainer"
-import NavbarLogo from "@/components/Navbar/NavbarLogo"
+import dynamic from "next/dynamic"
+
+const NavbarContainer = dynamic(() => import("@/components/Navbar/NavbarContainer"))
+const NavbarLinksContainer = dynamic(() => import("@/components/Navbar/NavbarLinksContainer"))
+const NavbarLink = dynamic(() => import("@/components/Navbar/NavbarLink"))
+const NavbarLogo = dynamic(() => import("@/components/Navbar/NavbarLogo"))
 
 export default function Navbar() {
   return (

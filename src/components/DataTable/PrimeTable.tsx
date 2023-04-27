@@ -23,7 +23,7 @@ const PrimeTable = ({ hideCategories, rowAmount }: Props) => {
     "https://docs.google.com/spreadsheets/d/11R-Ak5Edggygo4nXv9QjU32ATR75-UDKeyBsZlOx-fI/pub?output=csv"
   )
   const { flattenedData } = useFlatten(data)
-  const [filters, setFilters] = useState({
+  const [filters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
     "Asset Name": { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     "Business Category": { value: null, matchMode: FilterMatchMode.STARTS_WITH },

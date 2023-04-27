@@ -2,14 +2,15 @@
 
 // Imports - Libraries
 import { useState } from "react"
-
-// Imports - Leaflet
+import { useParse } from "@/hooks/useParse"
+import { useFlatten } from "@/hooks/useFlatten"
+import dynamic from "next/dynamic"
 import "../../app/globals.css"
 
 //Imports - Typescript
 import { ISampleDataFixed } from "../../types/ISampleData"
-import "primereact/resources/themes/lara-light-indigo/theme.css"
-import "primereact/resources/primereact.min.css"
+
+//Imports - ChartJS
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -21,11 +22,10 @@ import {
   Legend,
 } from "chart.js"
 import { Line } from "react-chartjs-2"
-import { useParse } from "@/hooks/useParse"
-import { useFlatten } from "@/hooks/useFlatten"
-import Dropdown from "@/components/Generics/Dropdown"
-import DropdownContainer from "@/components/LineChart/DropdownContainer"
-import DropdownTitle from "@/components/LineChart/DropdownTitle"
+
+const Dropdown = dynamic(() => import("@/components/Generics/Dropdown"))
+const DropdownContainer = dynamic(() => import("@/components/LineChart/DropdownContainer"))
+const DropdownTitle = dynamic(() => import("@/components/LineChart/DropdownTitle"))
 
 const LineChart = () => {
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
