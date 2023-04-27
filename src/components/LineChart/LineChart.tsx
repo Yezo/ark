@@ -66,7 +66,7 @@ const LineChart = () => {
       const averageRiskRatingPerYear =
         listOfRiskRatings.reduce((a: string, b: string) => Number(a) + Number(b), 0) /
         listOfRiskRatings.length
-      const dataPoint = { [year]: averageRiskRatingPerYear }
+      const dataPoint = { riskRating: averageRiskRatingPerYear, year: year }
       return dataPoint
     } else return
   }
@@ -79,7 +79,7 @@ const LineChart = () => {
   const averageRiskRatingIn2070 = handleAverageRiskRatingPerYear(filteredData, "2070")
 
   //Pre-emptively filter any undefineds
-  const avgDataPointss = [
+  const avgDataPoints = [
     averageRiskRatingIn2030,
     averageRiskRatingIn2040,
     averageRiskRatingIn2050,
@@ -87,9 +87,8 @@ const LineChart = () => {
     averageRiskRatingIn2070,
   ].filter((value) => value)
 
-  //FIX Overload errors???
-  const labels = avgDataPointss.map((item) => Object.keys(item)).flat()
-  const values = avgDataPointss.map((item) => Object.values(item)).flat()
+  const labels = avgDataPoints.map((item) => item && item.year)
+  const values = avgDataPoints.map((item) => item && item.riskRating)
 
   //Populate dropdown menus
   const getListOfAllAssetNames = () => {
