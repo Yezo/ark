@@ -121,8 +121,9 @@ const LineChart = () => {
       },
       tooltip: {
         callbacks: {
-          title: function (tooltipItems: any, data: any) {
-            return data
+          title: function (data: any) {
+            let title = data[0].label
+            return title
           },
         },
       },
