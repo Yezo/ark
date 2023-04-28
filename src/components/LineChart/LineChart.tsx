@@ -1,7 +1,6 @@
 "use client"
 
 // Imports - Libraries
-import { useState } from "react"
 import { useParse } from "@/hooks/useParse"
 import { useFlatten } from "@/hooks/useFlatten"
 import dynamic from "next/dynamic"
@@ -23,20 +22,27 @@ import {
 } from "chart.js"
 import { Line } from "react-chartjs-2"
 
+//Imports - Jotai
+import { useAtom } from "jotai"
+import { categoryAtom, nameAtom, locationAtom } from "@/atoms/globals"
+
 const Dropdown = dynamic(() => import("@/components/Generics/Dropdown"))
 const DropdownContainer = dynamic(() => import("@/components/LineChart/DropdownContainer"))
 const DropdownTitle = dynamic(() => import("@/components/LineChart/DropdownTitle"))
 
 const LineChart = () => {
+  //Chart.js
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
+
   // States
+  const [location, setLocation] = useAtom(locationAtom)
+  const [category, setCategory] = useAtom(categoryAtom)
+  const [name, setName] = useAtom(nameAtom)
+
   const { data } = useParse(
     "https://docs.google.com/spreadsheets/d/11R-Ak5Edggygo4nXv9QjU32ATR75-UDKeyBsZlOx-fI/pub?output=csv"
   )
   const { flattenedData: finalData } = useFlatten(data)
-  const [name, setName] = useState<string | null>("Acevedo-Kennedy")
-  const [category, setCategory] = useState<string | null>("Energy")
-  const [location, setLocation] = useState<string | null>("All")
 
   const filterCheck = (item: ISampleDataFixed) => {
     //If "All" is selected for location, then return all

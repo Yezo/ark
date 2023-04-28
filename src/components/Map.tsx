@@ -12,16 +12,22 @@ import "../app/globals.css"
 import Dropdown from "@/components/Generics/Dropdown"
 import DropdownContainer from "@/components/LineChart/DropdownContainer"
 import DropdownTitle from "@/components/LineChart/DropdownTitle"
+import { ISampleData } from "@/types/ISampleData"
 
-//Imports - Components
+//Imports - Jotai
+import { useAtom, useSetAtom } from "jotai"
+import { categoryAtom, nameAtom, decadeAtom } from "@/atoms/globals"
 
 const Map = () => {
   // States
+  const [decade, setDecade] = useAtom(decadeAtom)
+  const setCategory = useSetAtom(categoryAtom)
+  const setName = useSetAtom(nameAtom)
   const { data } = useParse(
     "https://docs.google.com/spreadsheets/d/11R-Ak5Edggygo4nXv9QjU32ATR75-UDKeyBsZlOx-fI/pub?output=csv"
   )
-  const [decade, setDecade] = useState<string | null>("2030")
 
+  //Utility functions
   const filteredData = data.filter(({ Year }) => Year === decade)
 
   const handleRiskRatingMarkerColor = (riskRating: string) => {
@@ -33,6 +39,12 @@ const Map = () => {
     if (rating >= 0.8 && rating <= 1) return redIcon
     else return
   }
+
+  const handleClick = (item: ISampleData) => {
+    setName(item["Asset Name"])
+    setCategory(item["Business Category"])
+  }
+
   return (
     <>
       <div className="flex items-center justify-between w-full max-w-[700px] bg-light-bg text-dark-text p-4">
@@ -63,8 +75,13 @@ const Map = () => {
         {filteredData.map((item, index) => (
           <Marker
             position={{ lat: Number(item.Lat), lng: Number(item.Long) }}
-            key={index}
             icon={handleRiskRatingMarkerColor(item["Risk Rating"])}
+            key={index}
+            eventHandlers={{
+              click: () => {
+                handleClick(item)
+              },
+            }}
           >
             <Popup>
               <p className="flex flex-col gap-2 justify-center items-center">

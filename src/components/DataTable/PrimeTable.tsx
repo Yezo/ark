@@ -41,7 +41,7 @@ const PrimeTable = ({ hideCategories, rowAmount }: Props) => {
     "Extreme cold": { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     "Sea level rise": { value: null, matchMode: FilterMatchMode.STARTS_WITH },
   })
-
+  const test = () => {}
   //Don't include certain categories since they have special parameters
   const headers = [
     "Lat",
