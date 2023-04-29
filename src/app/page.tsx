@@ -1,44 +1,41 @@
-import Link from "next/link"
-import "./globals.css"
-
-//Imports - Dynamic
+//Imports
 import dynamic from "next/dynamic"
-import Image from "next/image"
-import hero from "../../public/hero.webp"
+import "./globals.css"
 
 const CTAButton = dynamic(() => import("@/components/Generics/CTAButton"))
 const ProjectContainer = dynamic(() => import("@/components/ProjectSection/ProjectContainer"))
+const Hero = dynamic(() => import("@/components/HeroSection/Hero"))
+const HeroTextSection = dynamic(() => import("@/components/HeroSection/HeroTextSection"))
+const HeroTitle = dynamic(() => import("@/components/HeroSection/HeroTitle"))
+const HeroSubtitle = dynamic(() => import("@/components/HeroSection/HeroSubtitle"))
+const HeroButtonContainer = dynamic(() => import("@/components/HeroSection/HeroButtonContainer"))
+const HeroBanner = dynamic(() => import("@/components/HeroSection/HeroBanner"))
+
 export default function Home() {
   return (
     <main>
-      <section className="px-4 py-16 sm:px-20 sm:py-24 md:px-24 md:py-32 xl:px-52 bg-light-bg min-h-[calc(100vh-64px)] flex flex-col justify-between gap-8 lg:flex-row">
-        <div className="basis-1/2 space-y-10">
-          <h2 className="text-6xl font-bold text-dark-text">
-            Climate risk could end up as your financial risk
-          </h2>
-          <p className="max-w-[55ch] text-dark-text">
+      <Hero>
+        <HeroTextSection>
+          <HeroTitle>Climate risk could end up as your financial risk</HeroTitle>
+          <HeroSubtitle>
             Earth is facing climate change problems at an unprecedented rate. With riskthinking,
             users can now peek into the future with worldwide data all in the palm of their hands.
             The first and only true enterprise solution for climate financial risk.
-          </p>
-          <div className="flex items-center gap-4">
+          </HeroSubtitle>
+          <HeroButtonContainer>
             <CTAButton url="/" mainType={false}>
               Learn more
             </CTAButton>
             <CTAButton url="/" mainType={true}>
               Sign up today →
             </CTAButton>
-          </div>
-        </div>
+          </HeroButtonContainer>
+        </HeroTextSection>
 
-        <div className="basis-1/2">
-          <Image src={hero} alt="Image of climate change" placeholder="blur" />
-        </div>
+        <HeroBanner />
+      </Hero>
 
-        <Link href="/"></Link>
-      </section>
-
-      <ProjectContainer></ProjectContainer>
+      <ProjectContainer />
     </main>
   )
 }
