@@ -6,22 +6,23 @@ const CTAButton = dynamic(() => import("@/components/Generics/CTAButton"))
 const ProjectContainer = dynamic(() => import("@/components/ProjectSection/ProjectContainer"))
 const Hero = dynamic(() => import("@/components/HeroSection/Hero"))
 const HeroTextSection = dynamic(() => import("@/components/HeroSection/HeroTextSection"))
-const HeroTitle = dynamic(() => import("@/components/HeroSection/HeroTitle"))
-const HeroSubtitle = dynamic(() => import("@/components/HeroSection/HeroSubtitle"))
 const HeroButtonContainer = dynamic(() => import("@/components/HeroSection/HeroButtonContainer"))
 const HeroBanner = dynamic(() => import("@/components/HeroSection/HeroBanner"))
-
+const TitleH1 = dynamic(() => import("@/components/Typography/TitleH1"))
+const Paragraph = dynamic(() => import("@/components/Typography/Paragraph"))
 export default function Home() {
   return (
-    <main>
+    <main className="">
       <Hero>
         <HeroTextSection>
-          <HeroTitle>Climate risk could end up as your financial risk</HeroTitle>
-          <HeroSubtitle>
-            Earth is facing climate change problems at an unprecedented rate. With riskthinking,
-            users can now peek into the future with worldwide data all in the palm of their hands.
-            The first and only true enterprise solution for climate financial risk.
-          </HeroSubtitle>
+          <TitleH1>Climate risk could end up as your financial risk</TitleH1>
+          <Paragraph>
+            Riskthinking.ai is a leading cleantech company focusing on uncovering climate change’s
+            financial impact on countries, corporations, banks, insurance, and asset management
+            companies. We do this at scale for the enterprise, cutting across the many silos that
+            exist. Our platforms for climate and physical asset data help uncover the blind spots
+            that almost all other available systems may miss.
+          </Paragraph>
           <HeroButtonContainer>
             <CTAButton url="/" mainType={false}>
               Learn more
