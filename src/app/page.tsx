@@ -10,6 +10,7 @@ const HeroButtonContainer = dynamic(() => import("@/components/HeroSection/HeroB
 const HeroBanner = dynamic(() => import("@/components/HeroSection/HeroBanner"))
 const TitleH1 = dynamic(() => import("@/components/Typography/TitleH1"))
 const Paragraph = dynamic(() => import("@/components/Typography/Paragraph"))
+
 export default function Home() {
   return (
     <main className="">

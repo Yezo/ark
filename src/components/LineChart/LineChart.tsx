@@ -30,7 +30,7 @@ const Dropdown = dynamic(() => import("@/components/Generics/Dropdown"))
 const DropdownContainer = dynamic(() => import("@/components/LineChart/DropdownContainer"))
 const DropdownTitle = dynamic(() => import("@/components/LineChart/DropdownTitle"))
 
-const LineChart = () => {
+const LineChart = ({ toggle }: { toggle: boolean }) => {
   //Chart.js
   ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
@@ -139,7 +139,7 @@ const LineChart = () => {
       },
       title: {
         display: true,
-        text: "Sample Data - Risk Ratings",
+        text: "Average Risk Rating Per Decade",
       },
       tooltip: {
         callbacks: {
@@ -156,7 +156,7 @@ const LineChart = () => {
     labels,
     datasets: [
       {
-        label: "Risk Ratings",
+        label: "Avg. Risk Rating",
         data: values && values.map((item) => item),
         borderColor: "#feac1d",
         backgroundColor: "#feac1d",
@@ -167,37 +167,39 @@ const LineChart = () => {
   return (
     <>
       <div className="max-w-[700px] xl:min-w-[700px]">
-        <div className="flex gap-4 justify-around items-center p-2 flex-wrap">
-          <DropdownContainer>
-            <DropdownTitle>Asset Names</DropdownTitle>
-            <Dropdown
-              options={getListOfAllAssetNames()}
-              setter={setName}
-              placeholder={name}
-              key="1"
-            ></Dropdown>
-          </DropdownContainer>
+        {toggle && (
+          <div className="flex gap-4 justify-around items-center p-2 flex-wrap">
+            <DropdownContainer>
+              <DropdownTitle>Asset Names</DropdownTitle>
+              <Dropdown
+                options={getListOfAllAssetNames()}
+                setter={setName}
+                placeholder={name}
+                key="1"
+              ></Dropdown>
+            </DropdownContainer>
 
-          <DropdownContainer>
-            <DropdownTitle>Business Category</DropdownTitle>
-            <Dropdown
-              options={getListOfAllBusinessCategories()}
-              setter={setCategory}
-              placeholder={category}
-              key="2"
-            ></Dropdown>
-          </DropdownContainer>
+            <DropdownContainer>
+              <DropdownTitle>Business Category</DropdownTitle>
+              <Dropdown
+                options={getListOfAllBusinessCategories()}
+                setter={setCategory}
+                placeholder={category}
+                key="2"
+              ></Dropdown>
+            </DropdownContainer>
 
-          <DropdownContainer>
-            <DropdownTitle>Location</DropdownTitle>
-            <Dropdown
-              options={["All", ...getListOfAllLocations()]}
-              setter={setLocation}
-              placeholder={location}
-              key="3"
-            ></Dropdown>
-          </DropdownContainer>
-        </div>
+            <DropdownContainer>
+              <DropdownTitle>Location</DropdownTitle>
+              <Dropdown
+                options={["All", ...getListOfAllLocations()]}
+                setter={setLocation}
+                placeholder={location}
+                key="3"
+              ></Dropdown>
+            </DropdownContainer>
+          </div>
+        )}
         <div className="min-w-[350px] max-w-full">
           <Line data={datas} options={options} />
         </div>

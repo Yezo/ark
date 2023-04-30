@@ -3,7 +3,7 @@
 //Imports - Dynamic
 import dynamic from "next/dynamic"
 
-const Map = dynamic(() => import("@/components/Map"), {
+const Map = dynamic(() => import("@/components/Map/Map"), {
   ssr: false,
 })
 const PrimeTable = dynamic(() => import("@/components/DataTable/PrimeTable"))
@@ -37,6 +37,14 @@ export default function ProjectContainer() {
             Velit quasi, ex natus blanditiis nobis sequi porro iste error ipsa nam expedita!
           </Paragraph>
 
+          <Paragraph>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magnam numquam nihil, fugit
+            reiciendis repellendus neque nisi at, sit eos, laboriosam cum accusamus rerum temporibus
+            sapiente. Neque tenetur ex officiis hic voluptate voluptates libero aliquam nobis nihil
+            eaque ipsum repudiandae nemo, porro reiciendis corporis incidunt iure velit at cumque
+            minus perferendis explicabo! Odit commodi delectus eos expedita, minima distinctio velit
+            vitae illum ipsam mollitia magnam nisi nostrum non a soluta.
+          </Paragraph>
           <CTAButton url="/map" mainType={true}>
             View maps in detail →
           </CTAButton>
@@ -65,7 +73,7 @@ export default function ProjectContainer() {
         </ProjectSectionTextContainer>
 
         <ProjectSideContainer>
-          <LineChart />
+          <LineChart toggle={true} />
         </ProjectSideContainer>
       </ProjectSectionContainer>
 
