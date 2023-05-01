@@ -2,12 +2,14 @@
 //Imports - Jotai
 import { useAtom } from "jotai"
 import { decadeAtom } from "@/atoms/globals"
-import dynamic from "next/dynamic"
 
+//Imports - Dynamic
+import dynamic from "next/dynamic"
 const Dropdown = dynamic(() => import("@/components/Generics/Dropdown"))
 const DropdownTitle = dynamic(() => import("@/components/LineChart/DropdownTitle"))
 const DropdownContainer = dynamic(() => import("@/components/LineChart/DropdownContainer"))
 const TitleH3 = dynamic(() => import("@/components/Typography/TitleH3"))
+
 export default function MapHeader() {
   const [decade, setDecade] = useAtom(decadeAtom)
   return (

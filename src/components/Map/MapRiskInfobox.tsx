@@ -1,3 +1,4 @@
+//Imports - TypeScript
 import { ISampleData } from "@/types/ISampleData"
 
 export default function MapRiskInfobox({ data }: { data: ISampleData }) {

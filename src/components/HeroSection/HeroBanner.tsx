@@ -1,4 +1,7 @@
+//Imports - Next
 import Image from "next/image"
+
+//Imports - Images
 import hero from "../../../public/hero.webp"
 
 export default function HeroBanner() {

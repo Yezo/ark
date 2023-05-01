@@ -1,6 +1,10 @@
-import MapCardInfobox from "@/components/Map/MapCardInfobox"
-import MapRiskInfobox from "@/components/Map/MapRiskInfobox"
-import TitleH3 from "@/components/Typography/TitleH3"
+//Imports - Dynamic
+import dynamic from "next/dynamic"
+const MapCardInfobox = dynamic(() => import("@/components/Map/MapCardInfobox"))
+const MapRiskInfobox = dynamic(() => import("@/components/Map/MapRiskInfobox"))
+const TitleH3 = dynamic(() => import("@/components/Typography/TitleH3"))
+
+//Imports - TypeScript
 import { ISampleData } from "@/types/ISampleData"
 
 export default function MapCard({ data }: { data: ISampleData | null }) {

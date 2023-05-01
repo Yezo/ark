@@ -2,7 +2,6 @@
 
 //Imports - Dynamic
 import dynamic from "next/dynamic"
-
 const Map = dynamic(() => import("@/components/Map/Map"), {
   ssr: false,
 })
@@ -22,6 +21,7 @@ const ProjectSectionTextContainer = dynamic(
 const CTAButton = dynamic(() => import("@/components/Generics/CTAButton"))
 const TitleH2 = dynamic(() => import("@/components/Typography/TitleH2"))
 const Paragraph = dynamic(() => import("@/components/Typography/Paragraph"))
+
 export default function ProjectContainer() {
   return (
     <>

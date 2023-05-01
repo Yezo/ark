@@ -1,5 +1,5 @@
+//Imports - Dynamic
 import dynamic from "next/dynamic"
-
 const NavbarContainer = dynamic(() => import("@/components/Navbar/NavbarContainer"))
 const NavbarLinksContainer = dynamic(() => import("@/components/Navbar/NavbarLinksContainer"))
 const NavbarLink = dynamic(() => import("@/components/Navbar/NavbarLink"))
