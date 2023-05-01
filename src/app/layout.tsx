@@ -18,8 +18,8 @@ const Footer = dynamic(() => import("@/components/Footer/Footer"))
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} font-inter tracking-tight`}>
-      <body className="min-h-screen">
+    <html lang="en" className={`${inter.variable} font-inter tracking-tight antialiased`}>
+      <body className="min-h-screen ">
         <>
           <Navbar />
           {children}
