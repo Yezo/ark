@@ -143,9 +143,17 @@ const LineChart = ({ toggle }: { toggle: boolean }) => {
       },
       tooltip: {
         callbacks: {
-          title: function (data: any) {
+          title: (data: any) => {
             let title = data[0].label
             return title
+          },
+          afterLabel: (data: any) => {
+            const year = datas.labels && datas.labels[data.dataIndex]
+            const filtered = filteredData.filter((item) => item.Year === year)
+            const items = filtered.map(
+              (item) => `${item["Asset Name"]} (Risk Rating: ${item["Risk Rating"]})`
+            )
+            return items
           },
         },
       },
