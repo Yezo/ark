@@ -133,6 +133,29 @@ const LineChart = ({ toggle }: { toggle: boolean }) => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: true,
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: "Decade",
+          font: {
+            size: 16,
+          },
+          padding: 10,
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: "Risk Rating",
+          font: {
+            size: 16,
+          },
+          padding: 10,
+        },
+      },
+    },
     plugins: {
       legend: {
         position: "top" as const,
