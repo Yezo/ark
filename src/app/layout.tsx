@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: "RiskThinking",
     description: "Work Sample designed and developed by Kevin Vo",
-    url: "riskthinking.vercel.app/",
+    url: "https://riskthinking.vercel.app/",
     siteName: "RiskThinking",
     locale: "en-US",
     type: "website",
