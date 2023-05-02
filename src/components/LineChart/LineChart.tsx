@@ -109,6 +109,7 @@ const LineChart = ({ toggle }: { toggle: boolean }) => {
     }
   }
 
+  //Chart.js doesn't like functions!
   const values = getValues()
   const labels = getLabels()
 

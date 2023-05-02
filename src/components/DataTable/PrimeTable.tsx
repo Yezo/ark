@@ -1,4 +1,5 @@
 "use client"
+
 // Imports
 import { useState } from "react"
 import { useParse } from "@/hooks/useParse"
@@ -12,6 +13,7 @@ import { FilterMatchMode } from "primereact/api"
 import { DataTable } from "primereact/datatable"
 import { Column } from "primereact/column"
 
+//Types
 type Props = {
   hideCategories: boolean
   rowAmount: number
@@ -41,7 +43,7 @@ const PrimeTable = ({ hideCategories, rowAmount }: Props) => {
     "Extreme cold": { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     "Sea level rise": { value: null, matchMode: FilterMatchMode.STARTS_WITH },
   })
-  const test = () => {}
+
   //Don't include certain categories since they have special parameters
   const headers = [
     "Lat",

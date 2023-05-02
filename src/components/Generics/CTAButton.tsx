@@ -1,6 +1,7 @@
 //Imports - Next
 import Link from "next/link"
 
+//Types
 type Props = {
   url: string
   children: React.ReactNode

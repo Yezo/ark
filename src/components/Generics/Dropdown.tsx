@@ -3,6 +3,7 @@
 //Imports - React
 import { useState, useRef, useEffect } from "react"
 
+//Types
 type Props = {
   setter: React.Dispatch<React.SetStateAction<string | null>>
   options: string[]
