@@ -3,8 +3,19 @@ import { Inter } from "next/font/google"
 import dynamic from "next/dynamic"
 
 export const metadata = {
-  title: "RiskThinking - Work Sample",
+  title: {
+    default: "RiskThinking",
+    template: "%s | RiskThinking",
+  },
   description: "Work Sample designed and developed by Kevin Vo",
+  openGraph: {
+    title: "RiskThinking",
+    description: "Work Sample designed and developed by Kevin Vo",
+    url: "riskthinking.vercel.app/",
+    siteName: "RiskThinking",
+    locale: "en-US",
+    type: "website",
+  },
 }
 
 const inter = Inter({

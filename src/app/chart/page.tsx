@@ -1,5 +1,11 @@
-import dynamic from "next/dynamic"
+//Metadata
+export const metadata = {
+  title: "Chart",
+  description: "Work Sample designed and developed by Kevin Vo",
+}
 
+//Imports - Dynamic
+import dynamic from "next/dynamic"
 const LineChart = dynamic(() => import("@/components/LineChart/LineChart"))
 
 export default function ChartPage() {
