@@ -24,8 +24,10 @@ https://riskthinking.vercel.app/
 - Map with markers for each Business
 - Charts with dynamic data for Risk Ratings
 - Data table with sorting and filtering functionality
+- Implemented user interactivity shared amongst components
 - Optimized for dynamic importing of components
 - Optimized data table with pagination
+- Optimized SEO by defining metatags for different pages
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -35,11 +37,12 @@ https://riskthinking.vercel.app/
 - React
 - TypeScript
 - TailwindCSS
+- Jotai (State Management)
 - Chart.js
 - PrimeReact (DataTable)
-- PapaParse
-- ReactLeafletMaps
-- React Testing Library
+- PapaParse (CSV Parse)
+- React-Leaflet Maps
+- React-Testing-Library
 - Jest
 
 <p align="right">(<a href="#top">back to top</a>)</p>
