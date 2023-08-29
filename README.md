@@ -1,24 +1,28 @@
 <!-- https://github.com/tpacun/Best-README-Template -->
-<div id="top"></div>
+<!-- IMAGE LINK -->
+<div align="center"> <img src="https://kvo.vercel.app/riskthinking.png" data-canonical-src="https://kvo.vercel.app/riskthinking.png" height="420" /></div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#riskthinkingai">RiskThinkingAI</a></li>
-    <li><a href="#built-with">Built With</a></li>
-        <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#links">Links</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
+<!-- HEADER INFORMATION -->
+<br />
+<div align="center"><strong>riskthinking.ai</strong></div>
+<div align="center">A work sample for the company <a href="https://riskthinking.ai/">riskthinking</a>. <br />Data visualiztion for climate risk datasets.</div>
+<br />
+<div align="center">
+<a href="https://riskthinking.vercel.app/">Website</a> 
+<span><strong> · </strong></span>
+<a href="https://github.com/Yezo/riskthinking">GitHub</a> 
+<span><strong>·</strong></span>
+<a href="https://kvo.vercel.app/">Developer</a>
+</div>
 
-<!-- ABOUT THE PROJECT -->
+<!-- PROJECT INFORMATION -->
+## Introduction
 
-## RiskThinkingAI
+This project was designed and developed by myself as a work sample for riskthinking.ai. Following their guidelines, the objective was to create a compelling visualization of climate risk datasets using various formats such as charts, maps, and tables. Furthermore, the project required an integrated user interface that seamlessly incorporated multiple components and offered interactive functionality for users to engage with.
 
-https://riskthinking.vercel.app/
+In order to meet these requirements, I carefully crafted an interface that effectively showcased the climate risk datasets through visually appealing and informative charts, maps, and tables. The goal was to present the data in a manner that facilitated easy comprehension and allowed users to explore different insights. By integrating various components, I ensured a cohesive user experience, enabling users to navigate seamlessly between different views and access the information they needed.
 
+## Features
 - Utilizes PapaParse to parse CSV data into a JSON object
 - Features reusable custom hooks for parsing data objects
 - Map with markers for each Business
@@ -28,8 +32,6 @@ https://riskthinking.vercel.app/
 - Optimized for dynamic importing of components
 - Optimized data table with pagination
 - Optimized SEO by defining metatags for different pages
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Built With
 
@@ -45,8 +47,6 @@ https://riskthinking.vercel.app/
 - React-Testing-Library
 - Jest
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ## Getting Started
 
 First, run the development server:
@@ -61,26 +61,6 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTACT -->
-
-## Links
-
-Designed and developed by Kevin Vo for RiskThinking Work Sample
-
-- Project Demo Link: https://riskthinking.vercel.app/
-- Project Code Repository: [https://github.com/Yezo/riskthinking](https://github.com/Yezo/riskthinking)
-
-- Email: kvo.codes@gmail.com
-- My Portfolio: https://kvo.vercel.app/
-- My GitHub: https://github.com/Yezo
-- My LinkedIn: https://www.linkedin.com/in/kvocodes/
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
 ## Acknowledgements
 
 - https://primereact.org/datatable/
@@ -91,4 +71,9 @@ Designed and developed by Kevin Vo for RiskThinking Work Sample
 - http://www.benjaminkeen.com/google-maps-coloured-markers/
 - https://stackoverflow.com/questions/64451221/update-all-object-values-to-be-rounded-by-two-decimals
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+
+
